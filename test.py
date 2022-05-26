@@ -1,13 +1,8 @@
 # it is my scribbles
 
-import sys
-sys.stdin = open("input.txt", "rt")
+import itertools
 
-def solution(array, commands):
-    answer = []
-    for i in len(commands):
-        l = commands[i][0]
-    print(l)
-        # answer.append()
-    print(answer)
-    return answer
+
+a = [[1,2],[3,4],[5,6]]
+a = list(itertools.chain.from_iterable(a))
+print(a)
