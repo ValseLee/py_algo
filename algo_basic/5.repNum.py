@@ -1,3 +1,4 @@
+from decimal import ROUND_HALF_DOWN, ROUND_HALF_EVEN, ROUND_HALF_UP
 import enum
 from math import dist
 import sys
@@ -30,7 +31,7 @@ sys.stdin = open("input.txt", "rt")
 # 하단은 답안
 a = int(input())
 b = list(map(int, input().split()))
-ave = round(sum(b)/a)
+ave = ROUND_HALF_UP(sum(b)/a)
 min = float('inf')
 
 for index, x in enumerate(b): # a의 배열 값에 0부터 시작하는 인덱스를 매겨주는 함수
